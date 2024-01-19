@@ -4,10 +4,12 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const workoutRoutes = require('./routes/workouts.js')
-
+const cors = require('cors')
 
 //creatd express app
 const app = express();
+
+app.use(cors());
 
 //register the midleware()
 //any code that execute between getting request on the server and sending the response
